@@ -9,17 +9,14 @@
     <title>Buddy AI - Next Gen AI Solutions</title>
 
     <!-- Google Fonts -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- CSS -->
-
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -40,14 +37,26 @@
 
             </h2>
 
-            <ul class="nav-links">
+            <div class="nav-right">
 
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <ul class="nav-links">
 
-            </ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+
+                <!-- Theme Toggle Button -->
+
+                <button id="theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+            </div>
 
         </nav>
 
@@ -80,12 +89,6 @@
 
                     </button>
 
-                    <button class="btn btn-secondary">
-
-                        Watch Demo
-
-                    </button>
-
                 </div>
 
             </div>
@@ -100,7 +103,7 @@
 
     </section>
 
-    <!-- Features Section -->
+    <!-- Features -->
 
     <section class="features" id="features">
 
@@ -170,7 +173,7 @@
 
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
 
     <section class="about" id="about">
 
@@ -204,7 +207,7 @@
 
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact -->
 
     <section class="contact" id="contact">
 
@@ -241,10 +244,36 @@
     <footer>
 
         <p>
-            © 2026 Buddy AI | Pioneering Smarter Systems Globally.
+            © 2025 Buddy AI | Pioneering Smarter Systems Globally.
         </p>
 
     </footer>
+
+    <!-- JavaScript -->
+
+    <script>
+
+        const toggleBtn = document.getElementById("theme-toggle");
+
+        toggleBtn.addEventListener("click", () => {
+
+            document.body.classList.toggle("light-mode");
+
+            if(document.body.classList.contains("light-mode")){
+
+                toggleBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+            }
+
+            else{
+
+                toggleBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+            }
+
+        });
+
+    </script>
 
 </body>
 
